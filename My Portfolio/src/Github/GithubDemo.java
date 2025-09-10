@@ -14,7 +14,7 @@ public class GithubDemo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("my name is fooolll");
+        System.out.println("my name is lukman");
     }
     
 }
