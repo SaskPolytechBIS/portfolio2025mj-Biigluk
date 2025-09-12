@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Array;
-
+import Exceptions.*;
 /**
  *
  * @author ibrah
@@ -75,7 +75,11 @@ public class ArrayManager {
 
     }
 
-    public void insertAt(Object o, int pos) {
+    public void insertAt(Object o, int pos) throws OutOfBoundsException {
+        if (pos < 0 || pos > count) { // Checks for an OutOfBoundsException
+            throw new OutOfBoundsException("Cannot Insert item outside of collection bounds");
+        }
+        
         if (count >= items.length) {
             resize();
         }
@@ -93,11 +97,19 @@ public class ArrayManager {
 //        items[pos] = 66;
 //        count++;
     }
-    public void remome(int pos){
+    public void remome(int pos)throws OutOfBoundsException,NoItemsException{
+        if (pos < 0 || pos > count) { // Checks for an OutOfBoundsException
+            throw new OutOfBoundsException("Cannot Insert item outside of collection bounds");
+        }
+
+if (count == 0) { // Checks for a NoItemsException
+            throw new NoItemsException("Remove Failed. Collection is empty.");
+        }
         // copy everything from pos to count, back 1 space
       System.arraycopy(items, pos +1, items, pos,count-pos);
         
         count--;
     }
+    
 
 }
