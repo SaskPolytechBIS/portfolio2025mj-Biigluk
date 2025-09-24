@@ -4,6 +4,8 @@
  */
 package LinkLists;
 
+import Exceptions.*;
+
 /**
  *
  * @author ibrah
@@ -14,22 +16,34 @@ public class LinkedListsDemo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-    LinkedList list = new LinkedList();
-    list.add("a");
-    list.add("b");
-    list.add("c");
-    list.add("d");
-    list.add("e");
-    
-    list.print();
-        
-        
-        
-        
-        
-        
+
+        LinkedList list = new LinkedList();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.add("e");
+
+        list.print();
+        System.out.println("...........");
+        list.start();
+        try {
+            list.advance();
+            System.out.println(list.getCurrent());
+            list.addAfter("I am invader");
+            System.out.println(list.getCurrent());
+            list.removeCurrent();
+            list.print();
+            System.out.println(list.getCurrent());
+
+        } catch (OutOfBoundsException OOBE) {
+            System.out.println("ERROR:" + OOBE.getMessage());
+        } catch (NoItemsException NIE) {
+            System.out.println("ERROR" + NIE.getMessage());
+        }
+
     }
+
 //        ListNode a = new ListNode("Im an A");
 //        ListNode b = new ListNode("Im an B");
 //        ListNode c = new ListNode("Im an C");
@@ -61,5 +75,4 @@ public class LinkedListsDemo {
 //            temp = temp.next;
 //        }
 //    }
-
 }
