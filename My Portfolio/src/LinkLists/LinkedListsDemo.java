@@ -18,11 +18,15 @@ public class LinkedListsDemo {
     public static void main(String[] args) {
 
         LinkedList list = new LinkedList();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-        list.add("d");
-        list.add("e");
+        list.add(5);
+        list.add(6);
+        list.add(7);
+        list.add("dog");
+        list.add(8);
+        list.add(9);
+    
+        
+        list.print();
 
         list.print();
         System.out.println("...........");
