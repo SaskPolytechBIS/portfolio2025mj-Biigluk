@@ -9,7 +9,7 @@ package LinkLists;
  * @author ibrah
  */
 public class GLinkedList<T> {
-
+    
     private GListNode<T> items;
     private GListNode<T> current;
 

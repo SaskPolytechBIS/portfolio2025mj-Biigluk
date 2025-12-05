@@ -111,5 +111,25 @@ if (count == 0) { // Checks for a NoItemsException
         count--;
     }
     
+    public int findLargest()
+    {
+        int pos = 0;
+        for (int i = 0; i < count; i++) {
+            Comparable c = (Comparable) items[i];
+            if (c.compareTo(items[pos]) > 0) {
+                pos = i;
+            }
+        }
+        return pos;
+    }
+    public int find(Object o) {
+        for (int i = 0; i < count; i++) {
+            if (items[i].equals(o)) {
+                return i;
+            }
+        }
 
+        return -1;
+
+    }
 }

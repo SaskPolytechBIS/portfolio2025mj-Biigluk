@@ -8,6 +8,16 @@ package LinkLists;
  *
  * @author ibrah
  */
-public class GListNode {
-    
+public class GListNode<T> {
+    private T data;
+    public GListNode<T> next;
+    public GListNode(T data){
+        this.data=data;
+    }
+    public T getData(){
+        return data;
+    }
+    public void setData(T data){
+        this.data=data;
+}
 }

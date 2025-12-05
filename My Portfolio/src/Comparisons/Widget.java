@@ -1,0 +1,82 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Comparisons;
+
+/**
+ *
+ * @author ibrah
+ */
+public class Widget implements Comparable {
+    private int id;
+    private String name;
+    private int size;
+
+    public Widget(int id, String name, int size) {
+        this.id = id;
+        this.name = name;
+        this.size = size;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public boolean equals(Object o)
+    {
+        Widget w = (Widget)o;
+        if(id== w.getId())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+    public int compareTo(Object o)
+    {
+        Widget w = (Widget)o;
+        
+        if(size<w.getSize())
+        {
+            return -1;
+        }
+        else if(size>w.getSize())
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    
+}
+    public String toString()
+    {
+        return id + "" + name + " " + size;
+    }
+    
+}
