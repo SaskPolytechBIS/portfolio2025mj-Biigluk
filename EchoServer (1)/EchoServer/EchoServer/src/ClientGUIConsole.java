@@ -107,7 +107,7 @@ public class ClientGUIConsole extends JFrame implements ChatIF {
             host = "localhost";
             port = DEFAULT_PORT;
         }
-        ClientGUIConsole gui = new ClientGUIConsole("localhost", 555);
+        ClientGUIConsole gui = new ClientGUIConsole(host, port);
         // TODO code application logic here
     }
 
