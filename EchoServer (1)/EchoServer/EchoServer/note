@@ -1,0 +1,10 @@
+This framework using Proxy Pattern Structural Patterns – Deal with how classes and objects are composed/connected:
+Which have 3 main components: Subject (Interface) RealObject and Proxy
+
+✔ Load only when needed (lazy loading)
+✔ Load only once (caching)
+✔ Avoid heavy operations (disk I/O, network, CPU)
+✔ Control access to the real object
+
+=> Proxy controls access and adds behavior around a real object(it's supposed to do only ONE job (displaying) — not connection logic), 
+while keeping client code unchanged and keeping the real object focused only on its main job.
